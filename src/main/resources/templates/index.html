@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Linkkitietokanta</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+</head>
+<body>
+    <h1>Linkkitietokanta</h1>
+    <p>Listaa tietokantaan talletut linkit</p>
+    <button>
+        <a href="listing.html" th:href="@{/listing}">Siirry linkkilistaukseen</a>
+    </button>
+    <p>Lisää uusia linkkejä tietokantaan</p>
+    <button>
+        <a href="maintenance.html" th:href="@{/maintenance}">Siirry ylläpitosivulle</a>
+    </button>
+    
+</body>
+</html>

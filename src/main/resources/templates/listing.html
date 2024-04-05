@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Linkkitietokanta</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/linkit.css}" />
+  </head>
+  <body>
+    <h1>Linkit</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Linkki</th>
+        <th>Otsikko</th>
+        <th>Kuvaus</th>
+        <th>Avainsana</th>
+      </tr>
+      <tr th:each="link:${linkit}">
+        <td th:text="${link.id}">ID</td>
+        <td><a th:href="${link.linkki}" th:text="${link.linkki}" target="_blank"></a></td>
+        <!-- <td th:text="${link.linkki}">Linkki</td> -->
+        <td th:text="${link.otsikko}">Otsikko</td>
+        <td th:text="${link.kuvaus}">Kuvaus</td>
+        <td th:text="${link.avainsana}">Avainsana</td>
+      </tr>
+    </table>
+    <button>
+      <a href="index.html" th:href="@{/}">Takaisin kotisivulle</a>
+    </button>
+  </body>
+</html>
